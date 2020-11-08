@@ -1,9 +1,19 @@
+const Discord = require('discord.js');
 module.exports = {
-    //STATUS": PENDING FOR REVIEW BUGS
-	name: 'pfp',
-	description: 'Get the avatar URL of the tagged user(s), or your own avatar.',
-	aliases: ['icon', 'fotoperfil', 'avatar'],
-	execute(message) {
-		message.reply(message.author.displayAvatarURL());
-	},
+	name: "pfp",
+    description: "profile pic embed ver.",
+    usage: "$pfp",
+    accessableby: "Members",
+    aliases: ['avatar', 'profilepic', 'pic'],
+	execute(message) {   
+            var pfpMember = message.mentions.members.first() || message.member;
+            // we can just put the member object into the string here, that will tag the person
+            message.channel.send(`Here is ${pfpMember}'s pfp :)`);
+            const avatarEmbed = new Discord.MessageEmbed()
+                .setColor('#ffb7c5')
+                .setAuthor(pfpMember.user.username)
+                .setImage(pfpMember.user.displayAvatarURL());
+            
+            message.channel.send(avatarEmbed);
+    }
 };

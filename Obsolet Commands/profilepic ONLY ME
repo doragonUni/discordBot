@@ -6,10 +6,10 @@ module.exports = {
     accessableby: "Members",
     aliases: ['pic'],
 	execute(message) {  	
-        const exampleEmbed = new Discord.MessageEmbed()
+        const avatarEmbed = new Discord.MessageEmbed()
         .setColor('#ffb7c5')
         .setImage(message.author.avatarURL())
         .setTimestamp()
-    message.channel.send(exampleEmbed);
+    message.channel.send(avatarEmbed);
     }
 };

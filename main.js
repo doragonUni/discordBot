@@ -6,7 +6,7 @@ client.commands = new Discord.Collection();
 
 
 const prefix = '$';
-const token = 'Nzc0Njk3MjE1Nzc1MDgwNDc4.X6bjAQ.sT4NN6OGdrREhFAEFUM6RhI_l7U';
+const token = 'Nzc0Njk3MjE1Nzc1MDgwNDc4.X6bjAQ.X1WqZ2tlanA2aKuK_U8L5-NhFjA';
 
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
