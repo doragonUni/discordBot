@@ -6,7 +6,7 @@ client.commands = new Discord.Collection();
 
 
 const prefix = '$';
-const token = 'Nzc0Njk3MjE1Nzc1MDgwNDc4.X6bjAQ.X1WqZ2tlanA2aKuK_U8L5-NhFjA';
+const token = '';
 
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -17,15 +17,16 @@ for (const file of commandFiles){
 }
 
 
+
 // anuncia en consola cuando el bot esta activo
 client.once('ready', () => {
     console.log('Anouncement Bot is On');
-    client.user.setUsername('Doragon');
+    client.user.setUsername('Nezuko Bot');
     client.user.setActivity('with my owner @Doragon');
     //<client>.user.setActivity('<activity>', { type: 'WATCHING' });
     //<client>.user.setActivity('<activity>', { type: 'LISTENING' });
     //<client>.user.setPresence({ activity: { name: '<activity>' }, status: 'idle' });
-});
+}); 
 
 //here we add the command and the bot will send a message acording to the command, ONLY MESSAGE BY BOT
 //es ineficiente eso si!
